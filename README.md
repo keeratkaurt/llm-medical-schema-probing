@@ -1,67 +1,105 @@
-# LLM Medical Schema Probing
+# LLM Autoimmune Symptom Fit
+## Probing disease-symptom associations with surprisal and classification
 
-A research-style evaluation of whether general-purpose language models encode clinically plausible symptom schemas.
+### Overview
 
-## Overview
+Large language models trained on large text corpora appear to acquire structured knowledge about the world. In health-related contexts, an important question is whether these models encode medically meaningful relationships such as disease-symptom associations.
 
-Large language models are trained on human-generated text and often appear to acquire structured knowledge about the world. In high-stakes settings like healthcare, an important question is whether these models distinguish biologically plausible symptom descriptions from impossible or nonsensical ones.
+This project evaluates whether transformer language models assign lower surprisal to symptoms that are clinically associated with a given autoimmune disease compared to real but mismatched symptoms from other autoimmune conditions.
 
-This project probes that question using a controlled surprisal-based paradigm. I constructed minimal sentence pairs describing autoimmune diseases, where each pair ends in either:
+The project combines two analyses:
 
-- a clinically plausible symptom, or
-- a biologically impossible symptom.
+1. **Surprisal analysis**
+   - Measure how expected a symptom is given a disease context
 
-I then measured the surprisal of the final symptom token under GPT-2, GPT-2 Medium, and GPT-2 Large. If a model has internalized disease-related semantic expectations, plausible symptom endings should be more predictable and therefore have lower surprisal.
+2. **Classification**
+   - Use surprisal features to predict whether a disease-symptom pair is clinically matched
 
-## Research Question
+---
 
-Do language models assign lower surprisal to clinically plausible autoimmune symptoms than to biologically impossible ones, suggesting the presence of emergent medical schema-like knowledge?
+### Research Question
 
-## Why this matters
+Do language models assign lower surprisal to symptoms that are clinically associated with a given autoimmune disease than to symptoms that belong to other autoimmune diseases?
 
-Language models are increasingly used in health-adjacent contexts such as medical search, symptom triage, documentation support, and question answering. Even when they are not clinically deployed, they may still influence how users reason about symptoms and disease.
+---
 
-This project is relevant to neurotech and health AI because it evaluates whether model behavior reflects structured semantic expectations in a medically meaningful domain, while also testing an important limitation: whether apparent “medical reasoning” may instead be driven by lexical rarity.
+### Why this matters
 
-## Dataset
+Language models are increasingly used in health-adjacent applications such as symptom search, triage assistants, and medical documentation tools.
 
-The dataset contains 12 minimal pairs (24 total sentences). Each item names an autoimmune disease and ends with either:
+Understanding whether models encode disease-symptom associations helps evaluate:
 
-- a plausible symptom (for example fatigue, rash, joint pain), or
-- an implausible symptom (for example levitation, glowing fingernails, extra limbs).
+- reliability of biomedical knowledge in LLMs
+- risks of hallucinated or mismatched medical information
+- potential use of LLM probabilities as signals for knowledge probing
 
-The sentence structure is kept as parallel as possible so the final symptom drives the manipulation.
+---
 
-## Models
+### Dataset
+
+The dataset contains autoimmune diseases and symptoms categorized as:
+
+- **matched** – symptom associated with the disease
+- **mismatched** – symptom from another autoimmune disease
+
+Example:
+
+| disease | symptom | label |
+|-------|-------|------|
+| Lupus | butterfly rash | 1 |
+| Lupus | dry eyes | 0 |
+| Sjogren's syndrome | dry eyes | 1 |
+| Sjogren's syndrome | joint swelling | 0 |
+
+---
+
+### Method
+
+For each disease-symptom pair we generate templated sentences such as:
+
+> A patient with lupus often experiences butterfly rash.
+
+We then compute the **surprisal of the symptom token**:
+
+surprisal = −log₂ P(symptom | disease context)
+
+Lower surprisal indicates that the model considers the symptom more expected.
+
+---
+
+### Models
 
 - GPT-2
 - GPT-2 Medium
 - GPT-2 Large
 
-## Method
+---
 
-For each sentence:
-1. Tokenize the input with the model tokenizer
-2. Identify the final token
-3. Compute surprisal as:
+### Analyses
 
-   surprisal = -log2 p(token | preceding context)
+1. Compare surprisal distributions for matched vs mismatched symptoms
+2. Paired statistical testing
+3. Train a classifier using surprisal features to predict symptom correctness
 
-4. Compare surprisal across plausible and implausible conditions
-5. Visualize differences across models
+---
 
-## Main Finding
+### Results
 
-Across all three models, implausible symptom endings receive higher surprisal than plausible symptom endings. Larger models show a stronger separation, suggesting more structured expectations about symptom plausibility.
+The project evaluates whether:
 
-## Important Limitation
+- matched symptoms receive lower surprisal
+- model size improves disease-symptom discrimination
+- surprisal can be used as a signal for classification
 
-This effect may not reflect purely medical schema knowledge. Some implausible endings may also be rarer lexical items, which can independently increase surprisal. The notebook therefore includes lexical-confound checks and outlines next-step controls for strengthening causal interpretation.
+---
 
-## Repository Structure
+### Future Work
 
-```text
-data/        stimulus set
-notebooks/   main analysis notebook
-results/     exported tables and figures
-src/         reusable utility code
+- Extend to neurological disorders
+- Compare newer open-weight models
+- Incorporate clinical ontologies such as UMLS
+- Evaluate models on real clinical text
+
+---
+
+### Running the Project
