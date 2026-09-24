@@ -1,0 +1,15 @@
+name: Validate saved evaluation
+on: [push, pull_request]
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -v
+      - run: python analyze.py results/gpt2/scores.csv --output /tmp/gpt2-audit.json
+      - run: python analyze.py results/distilgpt2/scores.csv --output /tmp/distilgpt2-audit.json
+      - run: python analyze.py results/heldout/gpt2/scores.csv --output /tmp/gpt2-followup-audit.json
+      - run: python analyze.py results/heldout/distilgpt2/scores.csv --output /tmp/distilgpt2-followup-audit.json
