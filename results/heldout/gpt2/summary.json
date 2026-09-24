@@ -1,0 +1,38 @@
+{
+  "model": "openai-community/gpt2",
+  "input_csv": "data/heldout_symptoms.csv",
+  "n_symptoms": 16,
+  "n_diseases": 4,
+  "chance_top1": 0.25,
+  "interpretation": "Source-associated ranking; other diseases are not clinical negatives.",
+  "patient": {
+    "top1": 0.5625,
+    "top1_count": 9,
+    "mean_source_rank": 2.0625,
+    "bootstrap_95pct_interval": [
+      0.3125,
+      0.8125
+    ],
+    "per_disease": {
+      "lupus": "2/4",
+      "rheumatoid arthritis": "3/4",
+      "Sjogren's disease": "3/4",
+      "celiac disease": "1/4"
+    }
+  },
+  "symptom": {
+    "top1": 0.4375,
+    "top1_count": 7,
+    "mean_source_rank": 2.125,
+    "bootstrap_95pct_interval": [
+      0.1875,
+      0.6875
+    ],
+    "per_disease": {
+      "lupus": "2/4",
+      "rheumatoid arthritis": "3/4",
+      "Sjogren's disease": "1/4",
+      "celiac disease": "1/4"
+    }
+  }
+}

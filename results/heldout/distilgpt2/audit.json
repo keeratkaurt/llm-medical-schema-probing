@@ -1,0 +1,206 @@
+{
+  "n_phrases": 16,
+  "n_prompts": 2,
+  "predictions_changed_across_prompts": 5,
+  "source_match_changed_across_prompts": 4,
+  "confusion": {
+    "patient": {
+      "lupus": {
+        "lupus": 1,
+        "rheumatoid arthritis": 1,
+        "Sjogren's disease": 0,
+        "celiac disease": 2
+      },
+      "rheumatoid arthritis": {
+        "lupus": 0,
+        "rheumatoid arthritis": 3,
+        "Sjogren's disease": 0,
+        "celiac disease": 1
+      },
+      "Sjogren's disease": {
+        "lupus": 2,
+        "rheumatoid arthritis": 1,
+        "Sjogren's disease": 1,
+        "celiac disease": 0
+      },
+      "celiac disease": {
+        "lupus": 2,
+        "rheumatoid arthritis": 2,
+        "Sjogren's disease": 0,
+        "celiac disease": 0
+      }
+    },
+    "symptom": {
+      "lupus": {
+        "lupus": 3,
+        "rheumatoid arthritis": 0,
+        "Sjogren's disease": 0,
+        "celiac disease": 1
+      },
+      "rheumatoid arthritis": {
+        "lupus": 0,
+        "rheumatoid arthritis": 3,
+        "Sjogren's disease": 0,
+        "celiac disease": 1
+      },
+      "Sjogren's disease": {
+        "lupus": 1,
+        "rheumatoid arthritis": 1,
+        "Sjogren's disease": 2,
+        "celiac disease": 0
+      },
+      "celiac disease": {
+        "lupus": 0,
+        "rheumatoid arthritis": 3,
+        "Sjogren's disease": 0,
+        "celiac disease": 1
+      }
+    }
+  },
+  "errors": [
+    {
+      "prompt": "patient",
+      "source": "celiac disease",
+      "symptom": "nausea with pain in the abdomen",
+      "predicted": "lupus",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.36529
+    },
+    {
+      "prompt": "patient",
+      "source": "celiac disease",
+      "symptom": "itchy blisters on the knees and elbows",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.33895
+    },
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "a chalky mouth and difficulty tasting food",
+      "predicted": "lupus",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.23735
+    },
+    {
+      "prompt": "patient",
+      "source": "celiac disease",
+      "symptom": "numbness or tingling in the limbs",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.19802
+    },
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "dry skin and aching muscles",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.17602
+    },
+    {
+      "prompt": "patient",
+      "source": "lupus",
+      "symptom": "fevers that come and go",
+      "predicted": "celiac disease",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.16648
+    },
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "burning eyes with sensitivity to bright light",
+      "predicted": "lupus",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.11821
+    },
+    {
+      "prompt": "patient",
+      "source": "lupus",
+      "symptom": "headaches with episodes of dizziness",
+      "predicted": "celiac disease",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.08761
+    },
+    {
+      "prompt": "patient",
+      "source": "rheumatoid arthritis",
+      "symptom": "low energy and loss of appetite",
+      "predicted": "celiac disease",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.0726
+    },
+    {
+      "prompt": "patient",
+      "source": "celiac disease",
+      "symptom": "constipation and excess gas",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.0618
+    },
+    {
+      "prompt": "patient",
+      "source": "lupus",
+      "symptom": "swelling in the legs or around the eyes",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.0236
+    },
+    {
+      "prompt": "symptom",
+      "source": "celiac disease",
+      "symptom": "nausea with pain in the abdomen",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.51702
+    },
+    {
+      "prompt": "symptom",
+      "source": "celiac disease",
+      "symptom": "itchy blisters on the knees and elbows",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.48174
+    },
+    {
+      "prompt": "symptom",
+      "source": "lupus",
+      "symptom": "fevers that come and go",
+      "predicted": "celiac disease",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.38889
+    },
+    {
+      "prompt": "symptom",
+      "source": "rheumatoid arthritis",
+      "symptom": "low energy and loss of appetite",
+      "predicted": "celiac disease",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.36421
+    },
+    {
+      "prompt": "symptom",
+      "source": "celiac disease",
+      "symptom": "numbness or tingling in the limbs",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.24597
+    },
+    {
+      "prompt": "symptom",
+      "source": "Sjogren's disease",
+      "symptom": "a chalky mouth and difficulty tasting food",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.15126
+    },
+    {
+      "prompt": "symptom",
+      "source": "Sjogren's disease",
+      "symptom": "dry skin and aching muscles",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.10035
+    }
+  ]
+}

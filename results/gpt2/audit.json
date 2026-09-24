@@ -1,0 +1,190 @@
+{
+  "n_phrases": 24,
+  "n_prompts": 2,
+  "predictions_changed_across_prompts": 6,
+  "source_match_changed_across_prompts": 4,
+  "confusion": {
+    "patient": {
+      "lupus": {
+        "lupus": 5,
+        "rheumatoid arthritis": 1,
+        "Sjogren's disease": 0,
+        "celiac disease": 0
+      },
+      "rheumatoid arthritis": {
+        "lupus": 0,
+        "rheumatoid arthritis": 6,
+        "Sjogren's disease": 0,
+        "celiac disease": 0
+      },
+      "Sjogren's disease": {
+        "lupus": 4,
+        "rheumatoid arthritis": 0,
+        "Sjogren's disease": 2,
+        "celiac disease": 0
+      },
+      "celiac disease": {
+        "lupus": 2,
+        "rheumatoid arthritis": 1,
+        "Sjogren's disease": 0,
+        "celiac disease": 3
+      }
+    },
+    "symptom": {
+      "lupus": {
+        "lupus": 5,
+        "rheumatoid arthritis": 1,
+        "Sjogren's disease": 0,
+        "celiac disease": 0
+      },
+      "rheumatoid arthritis": {
+        "lupus": 0,
+        "rheumatoid arthritis": 6,
+        "Sjogren's disease": 0,
+        "celiac disease": 0
+      },
+      "Sjogren's disease": {
+        "lupus": 3,
+        "rheumatoid arthritis": 0,
+        "Sjogren's disease": 2,
+        "celiac disease": 1
+      },
+      "celiac disease": {
+        "lupus": 1,
+        "rheumatoid arthritis": 2,
+        "Sjogren's disease": 0,
+        "celiac disease": 3
+      }
+    }
+  },
+  "errors": [
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "a dry mouth that makes swallowing difficult",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.34179
+    },
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "difficulty speaking because the mouth is dry",
+      "predicted": "lupus",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.24517
+    },
+    {
+      "prompt": "patient",
+      "source": "celiac disease",
+      "symptom": "greasy and bulky stools",
+      "predicted": "lupus",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.19991
+    },
+    {
+      "prompt": "patient",
+      "source": "celiac disease",
+      "symptom": "a rash called dermatitis herpetiformis",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.14511
+    },
+    {
+      "prompt": "patient",
+      "source": "celiac disease",
+      "symptom": "loose and foul-smelling stools",
+      "predicted": "lupus",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.06373
+    },
+    {
+      "prompt": "patient",
+      "source": "lupus",
+      "symptom": "color changes in the fingers and toes after cold exposure",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.06123
+    },
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "dry nasal passages and a dry cough",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.06062
+    },
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "swelling of glands around the face and neck",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.04699
+    },
+    {
+      "prompt": "symptom",
+      "source": "Sjogren's disease",
+      "symptom": "difficulty speaking because the mouth is dry",
+      "predicted": "celiac disease",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.42122
+    },
+    {
+      "prompt": "symptom",
+      "source": "celiac disease",
+      "symptom": "greasy and bulky stools",
+      "predicted": "lupus",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.30551
+    },
+    {
+      "prompt": "symptom",
+      "source": "Sjogren's disease",
+      "symptom": "eyes that feel dry and gritty",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.25972
+    },
+    {
+      "prompt": "symptom",
+      "source": "lupus",
+      "symptom": "color changes in the fingers and toes after cold exposure",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.21819
+    },
+    {
+      "prompt": "symptom",
+      "source": "Sjogren's disease",
+      "symptom": "a dry mouth that makes swallowing difficult",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.21465
+    },
+    {
+      "prompt": "symptom",
+      "source": "celiac disease",
+      "symptom": "a rash called dermatitis herpetiformis",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.1682
+    },
+    {
+      "prompt": "symptom",
+      "source": "Sjogren's disease",
+      "symptom": "tooth decay due to reduced saliva",
+      "predicted": "lupus",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.08369
+    },
+    {
+      "prompt": "symptom",
+      "source": "celiac disease",
+      "symptom": "loose and foul-smelling stools",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.04771
+    }
+  ]
+}

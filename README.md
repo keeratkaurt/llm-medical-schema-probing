@@ -35,6 +35,35 @@ Chance ranking under a uniform four-disease guess is 25%, but the symptom set wa
 
 See [DistilGPT-2 summary](results/distilgpt2/summary.json), [GPT-2 summary](results/gpt2/summary.json), and their corresponding `scores.csv` files for each source rank, predicted context, and bits-per-token scores.
 
+## Audit the saved scores
+
+```bash
+python analyze.py results/gpt2/scores.csv --output results/gpt2/audit.json
+python analyze.py results/distilgpt2/scores.csv --output results/distilgpt2/audit.json
+python -m unittest discover -s tests -v
+```
+
+The audit verifies that every stored predicted disease and source rank agrees with
+the four raw scores, checks that every phrase has both prompts, writes disease-by-
+disease confusion counts, and lists misranked phrases with the difference between
+the source-associated score and the best score. The checked-in reports show that
+the **predicted disease** changes for 6/24 phrases in GPT-2 and 8/24 in
+DistilGPT-2. **Whether the source is ranked first** changes for 4/24 and 7/24
+respectively; DistilGPT-2 has a net increase of five correct source matches in
+the second prompt. This separates the number of changed cases from the net score
+change. The reports are descriptive: phrasing and overlapping symptoms remain
+uncontrolled confounders. CI checks the analysis against saved outputs without
+downloading either model.
+
+## Next experiment
+
+Before claiming robustness, create a larger, separately documented phrase set
+with independently sourced descriptions and explicit overlap categories. Freeze
+it before running both models, record phrase provenance, include a simple
+wording-control baseline, and evaluate uncertainty across source groups. Do not
+treat the 24 original phrases as an independent clinical test set or interpret a
+source-rank mismatch as a clinical hallucination.
+
 ## Limitations
 
 - Tiny, hand-curated, nonindependent symptom set. The bootstrap interval reflects variability within these 24 phrases, not clinical generalization.

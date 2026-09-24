@@ -1,0 +1,17 @@
+disease,symptom,source_url,overlap_note
+lupus,hair thinning or hair loss,https://www.niams.nih.gov/health-topics/lupus,may occur for other reasons
+lupus,swelling in the legs or around the eyes,https://www.niams.nih.gov/health-topics/lupus,may occur for other reasons
+lupus,fevers that come and go,https://www.niams.nih.gov/health-topics/lupus,shared with rheumatoid arthritis
+lupus,headaches with episodes of dizziness,https://www.niams.nih.gov/health-topics/lupus,may occur for other reasons
+rheumatoid arthritis,firm lumps beneath the skin near the elbows,https://www.niams.nih.gov/health-topics/rheumatoid-arthritis,source-associated but not exclusive
+rheumatoid arthritis,joint swelling that makes bending the knees difficult,https://www.niams.nih.gov/health-topics/rheumatoid-arthritis,joint swelling can overlap
+rheumatoid arthritis,joint stiffness after long periods of rest,https://www.niams.nih.gov/health-topics/rheumatoid-arthritis,joint stiffness can overlap
+rheumatoid arthritis,low energy and loss of appetite,https://www.niams.nih.gov/health-topics/rheumatoid-arthritis,fatigue can overlap
+Sjogren's disease,burning eyes with sensitivity to bright light,https://www.niams.nih.gov/health-topics/sjogrens-disease,dry eye symptoms can overlap
+Sjogren's disease,a chalky mouth and difficulty tasting food,https://www.niams.nih.gov/health-topics/sjogrens-disease,dry mouth can overlap
+Sjogren's disease,dry skin and aching muscles,https://www.niams.nih.gov/health-topics/sjogrens-disease,aching can overlap
+Sjogren's disease,irritated eyelids and blurry vision,https://www.niams.nih.gov/health-topics/sjogrens-disease,dry eye symptoms can overlap
+celiac disease,nausea with pain in the abdomen,https://www.niddk.nih.gov/health-information/digestive-diseases/celiac-disease/symptoms-causes,shared nonspecific symptoms
+celiac disease,constipation and excess gas,https://www.niddk.nih.gov/health-information/digestive-diseases/celiac-disease/symptoms-causes,shared nonspecific symptoms
+celiac disease,itchy blisters on the knees and elbows,https://www.niddk.nih.gov/health-information/digestive-diseases/celiac-disease/symptoms-causes,dermatitis herpetiformis description
+celiac disease,numbness or tingling in the limbs,https://www.niddk.nih.gov/health-information/digestive-diseases/celiac-disease/symptoms-causes,may occur for other reasons

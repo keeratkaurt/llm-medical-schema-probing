@@ -1,0 +1,190 @@
+{
+  "n_phrases": 16,
+  "n_prompts": 2,
+  "predictions_changed_across_prompts": 4,
+  "source_match_changed_across_prompts": 2,
+  "confusion": {
+    "patient": {
+      "lupus": {
+        "lupus": 2,
+        "rheumatoid arthritis": 0,
+        "Sjogren's disease": 1,
+        "celiac disease": 1
+      },
+      "rheumatoid arthritis": {
+        "lupus": 0,
+        "rheumatoid arthritis": 3,
+        "Sjogren's disease": 0,
+        "celiac disease": 1
+      },
+      "Sjogren's disease": {
+        "lupus": 0,
+        "rheumatoid arthritis": 0,
+        "Sjogren's disease": 3,
+        "celiac disease": 1
+      },
+      "celiac disease": {
+        "lupus": 2,
+        "rheumatoid arthritis": 1,
+        "Sjogren's disease": 0,
+        "celiac disease": 1
+      }
+    },
+    "symptom": {
+      "lupus": {
+        "lupus": 2,
+        "rheumatoid arthritis": 0,
+        "Sjogren's disease": 1,
+        "celiac disease": 1
+      },
+      "rheumatoid arthritis": {
+        "lupus": 0,
+        "rheumatoid arthritis": 3,
+        "Sjogren's disease": 0,
+        "celiac disease": 1
+      },
+      "Sjogren's disease": {
+        "lupus": 2,
+        "rheumatoid arthritis": 1,
+        "Sjogren's disease": 1,
+        "celiac disease": 0
+      },
+      "celiac disease": {
+        "lupus": 1,
+        "rheumatoid arthritis": 2,
+        "Sjogren's disease": 0,
+        "celiac disease": 1
+      }
+    }
+  },
+  "errors": [
+    {
+      "prompt": "patient",
+      "source": "lupus",
+      "symptom": "hair thinning or hair loss",
+      "predicted": "Sjogren's disease",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.31618
+    },
+    {
+      "prompt": "patient",
+      "source": "celiac disease",
+      "symptom": "numbness or tingling in the limbs",
+      "predicted": "lupus",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.29228
+    },
+    {
+      "prompt": "patient",
+      "source": "celiac disease",
+      "symptom": "nausea with pain in the abdomen",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.2618
+    },
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "a chalky mouth and difficulty tasting food",
+      "predicted": "celiac disease",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.24583
+    },
+    {
+      "prompt": "patient",
+      "source": "rheumatoid arthritis",
+      "symptom": "low energy and loss of appetite",
+      "predicted": "celiac disease",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.19114
+    },
+    {
+      "prompt": "patient",
+      "source": "celiac disease",
+      "symptom": "itchy blisters on the knees and elbows",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.18399
+    },
+    {
+      "prompt": "patient",
+      "source": "lupus",
+      "symptom": "fevers that come and go",
+      "predicted": "celiac disease",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.06336
+    },
+    {
+      "prompt": "symptom",
+      "source": "rheumatoid arthritis",
+      "symptom": "low energy and loss of appetite",
+      "predicted": "celiac disease",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.29665
+    },
+    {
+      "prompt": "symptom",
+      "source": "celiac disease",
+      "symptom": "numbness or tingling in the limbs",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.24598
+    },
+    {
+      "prompt": "symptom",
+      "source": "lupus",
+      "symptom": "fevers that come and go",
+      "predicted": "celiac disease",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.23387
+    },
+    {
+      "prompt": "symptom",
+      "source": "celiac disease",
+      "symptom": "nausea with pain in the abdomen",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.23233
+    },
+    {
+      "prompt": "symptom",
+      "source": "lupus",
+      "symptom": "hair thinning or hair loss",
+      "predicted": "Sjogren's disease",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.13905
+    },
+    {
+      "prompt": "symptom",
+      "source": "celiac disease",
+      "symptom": "itchy blisters on the knees and elbows",
+      "predicted": "lupus",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.09572
+    },
+    {
+      "prompt": "symptom",
+      "source": "Sjogren's disease",
+      "symptom": "dry skin and aching muscles",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.05057
+    },
+    {
+      "prompt": "symptom",
+      "source": "Sjogren's disease",
+      "symptom": "a chalky mouth and difficulty tasting food",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.049
+    },
+    {
+      "prompt": "symptom",
+      "source": "Sjogren's disease",
+      "symptom": "irritated eyelids and blurry vision",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.00352
+    }
+  ]
+}

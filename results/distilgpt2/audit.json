@@ -1,0 +1,214 @@
+{
+  "n_phrases": 24,
+  "n_prompts": 2,
+  "predictions_changed_across_prompts": 8,
+  "source_match_changed_across_prompts": 7,
+  "confusion": {
+    "patient": {
+      "lupus": {
+        "lupus": 3,
+        "rheumatoid arthritis": 1,
+        "Sjogren's disease": 1,
+        "celiac disease": 1
+      },
+      "rheumatoid arthritis": {
+        "lupus": 0,
+        "rheumatoid arthritis": 6,
+        "Sjogren's disease": 0,
+        "celiac disease": 0
+      },
+      "Sjogren's disease": {
+        "lupus": 4,
+        "rheumatoid arthritis": 0,
+        "Sjogren's disease": 0,
+        "celiac disease": 2
+      },
+      "celiac disease": {
+        "lupus": 2,
+        "rheumatoid arthritis": 1,
+        "Sjogren's disease": 0,
+        "celiac disease": 3
+      }
+    },
+    "symptom": {
+      "lupus": {
+        "lupus": 6,
+        "rheumatoid arthritis": 0,
+        "Sjogren's disease": 0,
+        "celiac disease": 0
+      },
+      "rheumatoid arthritis": {
+        "lupus": 0,
+        "rheumatoid arthritis": 6,
+        "Sjogren's disease": 0,
+        "celiac disease": 0
+      },
+      "Sjogren's disease": {
+        "lupus": 2,
+        "rheumatoid arthritis": 0,
+        "Sjogren's disease": 3,
+        "celiac disease": 1
+      },
+      "celiac disease": {
+        "lupus": 2,
+        "rheumatoid arthritis": 1,
+        "Sjogren's disease": 1,
+        "celiac disease": 2
+      }
+    }
+  },
+  "errors": [
+    {
+      "prompt": "patient",
+      "source": "celiac disease",
+      "symptom": "a rash called dermatitis herpetiformis",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.30255
+    },
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "difficulty speaking because the mouth is dry",
+      "predicted": "celiac disease",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.26839
+    },
+    {
+      "prompt": "patient",
+      "source": "celiac disease",
+      "symptom": "damage to permanent tooth enamel",
+      "predicted": "lupus",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.26801
+    },
+    {
+      "prompt": "patient",
+      "source": "lupus",
+      "symptom": "color changes in the fingers and toes after cold exposure",
+      "predicted": "celiac disease",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.15654
+    },
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "a dry mouth that makes swallowing difficult",
+      "predicted": "lupus",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.12017
+    },
+    {
+      "prompt": "patient",
+      "source": "celiac disease",
+      "symptom": "greasy and bulky stools",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.0879
+    },
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "eyes that feel dry and gritty",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.07835
+    },
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "dry nasal passages and a dry cough",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.06059
+    },
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "swelling of glands around the face and neck",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.04906
+    },
+    {
+      "prompt": "patient",
+      "source": "lupus",
+      "symptom": "a rash after exposure to sunlight",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.03621
+    },
+    {
+      "prompt": "patient",
+      "source": "Sjogren's disease",
+      "symptom": "tooth decay due to reduced saliva",
+      "predicted": "celiac disease",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.02348
+    },
+    {
+      "prompt": "patient",
+      "source": "lupus",
+      "symptom": "painless sores in the mouth or nose",
+      "predicted": "Sjogren's disease",
+      "source_rank": 3,
+      "source_minus_best_bits_per_token": 0.0109
+    },
+    {
+      "prompt": "symptom",
+      "source": "celiac disease",
+      "symptom": "damage to permanent tooth enamel",
+      "predicted": "Sjogren's disease",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.55794
+    },
+    {
+      "prompt": "symptom",
+      "source": "celiac disease",
+      "symptom": "a rash called dermatitis herpetiformis",
+      "predicted": "rheumatoid arthritis",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.31281
+    },
+    {
+      "prompt": "symptom",
+      "source": "Sjogren's disease",
+      "symptom": "difficulty speaking because the mouth is dry",
+      "predicted": "celiac disease",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.22378
+    },
+    {
+      "prompt": "symptom",
+      "source": "celiac disease",
+      "symptom": "greasy and bulky stools",
+      "predicted": "lupus",
+      "source_rank": 4,
+      "source_minus_best_bits_per_token": 0.15743
+    },
+    {
+      "prompt": "symptom",
+      "source": "Sjogren's disease",
+      "symptom": "swelling of glands around the face and neck",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.09337
+    },
+    {
+      "prompt": "symptom",
+      "source": "Sjogren's disease",
+      "symptom": "eyes that feel dry and gritty",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.07867
+    },
+    {
+      "prompt": "symptom",
+      "source": "celiac disease",
+      "symptom": "loose and foul-smelling stools",
+      "predicted": "lupus",
+      "source_rank": 2,
+      "source_minus_best_bits_per_token": 0.002
+    }
+  ]
+}
