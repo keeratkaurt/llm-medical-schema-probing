@@ -1,0 +1,37 @@
+{
+  "model": "openai-community/gpt2",
+  "n_symptoms": 24,
+  "n_diseases": 4,
+  "chance_top1": 0.25,
+  "interpretation": "Source-associated ranking; other diseases are not clinical negatives.",
+  "patient": {
+    "top1": 0.6666666666666666,
+    "top1_count": 16,
+    "mean_source_rank": 1.5416666666666667,
+    "bootstrap_95pct_interval": [
+      0.4583333333333333,
+      0.8333333333333334
+    ],
+    "per_disease": {
+      "lupus": "5/6",
+      "rheumatoid arthritis": "6/6",
+      "Sjogren's disease": "2/6",
+      "celiac disease": "3/6"
+    }
+  },
+  "symptom": {
+    "top1": 0.6666666666666666,
+    "top1_count": 16,
+    "mean_source_rank": 1.5833333333333333,
+    "bootstrap_95pct_interval": [
+      0.4583333333333333,
+      0.8333333333333334
+    ],
+    "per_disease": {
+      "lupus": "5/6",
+      "rheumatoid arthritis": "6/6",
+      "Sjogren's disease": "2/6",
+      "celiac disease": "3/6"
+    }
+  }
+}

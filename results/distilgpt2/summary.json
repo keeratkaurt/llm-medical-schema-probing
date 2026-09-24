@@ -1,0 +1,37 @@
+{
+  "model": "distilbert/distilgpt2",
+  "n_symptoms": 24,
+  "n_diseases": 4,
+  "chance_top1": 0.25,
+  "interpretation": "Source-associated ranking; other diseases are not clinical negatives.",
+  "patient": {
+    "top1": 0.5,
+    "top1_count": 12,
+    "mean_source_rank": 1.875,
+    "bootstrap_95pct_interval": [
+      0.2916666666666667,
+      0.7083333333333334
+    ],
+    "per_disease": {
+      "lupus": "3/6",
+      "rheumatoid arthritis": "6/6",
+      "Sjogren's disease": "0/6",
+      "celiac disease": "3/6"
+    }
+  },
+  "symptom": {
+    "top1": 0.7083333333333334,
+    "top1_count": 17,
+    "mean_source_rank": 1.5416666666666667,
+    "bootstrap_95pct_interval": [
+      0.5416666666666666,
+      0.875
+    ],
+    "per_disease": {
+      "lupus": "6/6",
+      "rheumatoid arthritis": "6/6",
+      "Sjogren's disease": "3/6",
+      "celiac disease": "2/6"
+    }
+  }
+}
